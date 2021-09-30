@@ -14,6 +14,8 @@ a {
 }
 .page-header{
    background-color:white; 
+   display: flex;
+   flex-direction: column-reverse;
 }
 .navigation-link{
     font-family: 'Gilroy', sans-serif;
@@ -29,25 +31,24 @@ a {
     }
 .active-nav-link::before{
     position: absolute;
-        background-color: #FF7129; 
-        width: 10px;
-        height: 1px;
-        content: '';
-        top: 50%;
-       right:-18px;
+    background-color: #FF7129; 
+    width: 10px;
+    height: 1px;
+    content: '';
+    top: 50%;
+    right:-18px;
     }
-    .active-nav-link::after{
-        position: absolute;
-            background-color: #FF7129; 
-            width: 10px;
-            height: 1px;
-            content: '';
-            top: 50%;
-            left: -18px;}
-    .header-wrapper-contacts{
+.active-nav-link::after{
+    position: absolute;
+    background-color: #FF7129; 
+    width: 10px;
+    height: 1px;
+    content: '';
+    top: 50%;
+    left: -18px;}
+.header-wrapper-contacts{
         position: relative;
-    background-color: #20242D;
-   
+         background-color: #20242D;
 }
 .contact-link{
     color: #FFFFFF;
@@ -67,8 +68,31 @@ a {
 }
 .welcome-section{
     background-color: #5a6a81;
+    position: relative;
     width: 1600px;
     height: 844px;
+}
+.welcome-section::before{
+  
+    position: absolute;
+    content:'';
+    background-image: url('../img/solar.png');
+    background-repeat: no-repeat;
+    left: 50px;
+    top: 167px;
+    width: 379px;
+    height: 145px;
+}
+
+.welcome-section::after{
+    position: absolute;
+    content:'';
+    background-image: url('../img/energy.png');
+    background-repeat: no-repeat;
+    right:50px;
+    top: 417px;
+    width: 444px;
+    height: 145px;
 }
 .main-title{
     font-family: 'Gilroy',sans-serif;
@@ -100,12 +124,23 @@ a {
     width: 187px;
     height: 49px;
     color: #FFFFFF;
+    margin-left: 706px;
+    margin-right: 707px;
 }
-.info-section{
-    position: relative;
-
-}
-
+.button-footer{
+    width: 187px;
+    height: 49px;
+    background: #20242D;
+    font-family: 'Gilroy',sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    border: 1px solid #FF7129;
+    box-sizing: border-box;
+ }
 .title{
     font-family: 'Gilroy',sans-serif;
     font-style: normal;
@@ -114,13 +149,12 @@ a {
     line-height: 97%;
     color:black;
     position: absolute;
-    width: 290px;
+    width: 700px;
     height: 47px;
-   right: 428px;
-    top:201px;
+    left: 882px;
+    top: 201px;
 }
 .title-on-background{
-    
     font-family: 'Gilroy',sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -129,8 +163,7 @@ a {
     color: #FFFFFF;
     position: absolute;
     width: 700px;
-    height: 47px;
-   right: 428px;
+    right: 428px;
   
 }
 .text-container{
@@ -147,7 +180,21 @@ a {
     position: relative;
 }
 .page-footer{
-background-color:#20242D; ;
+    position: relative;
+    background-color:#20242D;
+    width: 1600px;
+    height: 207px;
+}
+.page-footer::before{
+    position: absolute;
+    content: '';
+    background-image: url(../img/rectangle\ 33.png);
+    width: 1500px;
+    height: 1px;
+    left: 50px;
+}
+.legal{
+    display: flex;
 }
 .navigation-link-footer{
     font-family:'Gilroy',sans-serif;
@@ -160,36 +207,6 @@ background-color:#20242D; ;
 .active-footer-link{
     color: #FF7129;
 }
-.legal-info{
-    font-family: Gilroy;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 14px;
-    text-align: center;
-    color: #7B7E85;
-}
- .button-footer{
-    background: #20242D;
-    font-family: 'Gilroy',sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 17px;
-    text-align: center;
-    color: #FFFFFF;
-    border: 1px solid #FF7129;
-    box-sizing: border-box;
-    filter: drop-shadow(0px 4px 28px rgba(255, 113, 41, 0.67));
- }
- .line{
-    background: #7B7E85;
-    opacity: 0.3;
-    width: 1500px;
-    height: 1px;
-    left: 50px;
-    top: 144px;
- }
  .title-on-background{
     font-family: 'Gilroy',sans-serif;
     font-style: normal;
@@ -211,8 +228,6 @@ background-color:#20242D; ;
     position: absolute;
     width: 130px;
     height: 47px;
-  /*  left: 217px;*/
-   /* top: 291px;*/
 }
 .thick-font{
     font-family: 'Gilroy',sans-serif;
@@ -311,6 +326,7 @@ margin: 0;
     margin-top: 132px;
     margin-left: 134px;
     margin-bottom: 115px;
+   margin-right: 35px;
 }
 .navigation-list-footer{
     display: flex;
@@ -338,7 +354,15 @@ margin: 0;
     padding-right: 50px;
     padding-bottom: 24px;
     list-style: none;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #7B7E85;
 }
+
 .title-on-background-title-place{
     width: 130px;
     height: 47px;
