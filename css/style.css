@@ -73,7 +73,7 @@ a {
     top: 50%;
     left: -18px;}
 .header-wrapper-contacts{
-        position: relative;
+ /*       position: relative;*/
          background-color: #20242D;
 }
 .contact-link{
@@ -476,6 +476,8 @@ margin: 0;
     top: 175px;
     left: 800px;
 }
+
+
 
 
 
