@@ -14,14 +14,34 @@ body{
     width: 1600px;
     height: 844px;
 }
-
 a {
     text-decoration: none;
 }
 .page-header{
+    position: relative;
    background-color:white; 
    display: flex;
    flex-direction: column-reverse;
+}
+.page-header::before{
+    position: absolute;
+    content: '';
+    background-image:url(../img/envelope.svg);
+    background-repeat: no-repeat;
+    width: 11.67px;
+    height: 10.5px;
+    top: 11.75px;
+    right: 362.17px;
+}
+.page-header::after{
+    position: absolute;
+    content: '';
+    background-image:url(../img/fone.svg);
+    background-repeat: no-repeat;
+    width:10.5px;
+    height:10.5px;
+    top: 11.75px;
+    right: 157.75px;
 }
 .navigation-link{
     font-family: 'Gilroy', sans-serif;
@@ -437,3 +457,32 @@ margin: 0;
     height: 412px;
     width: 1600px;
 }
+.page-contact{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 1600px;
+    height: 782px;
+}
+.title-contact{
+    position: absolute;
+    top: 125px;
+    left: 217px;
+}
+.map{
+    position: absolute;
+    width: 800px;
+    height: 607px;
+    top: 175px;
+    left: 800px;
+}
+
+
+
+
+
+
+
+
+
+
